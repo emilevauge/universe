@@ -1,0 +1,44 @@
+{
+  "id": "{{traefik.name}}",
+  "instances": {{traefik.instances}},
+  "cpus": {{traefik.cpus}},
+  "mem": {{traefik.mem}},
+  "maintainer": "support@containo.us",
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "{{resource.assets.container.docker.traefik-docker}}",
+      "network": "HOST",
+      "privileged": false
+    }
+  },
+  "healthChecks": [
+    {
+      "path": "/api",
+      "portIndex": 0,
+      "protocol": "HTTP",
+      "gracePeriodSeconds": 60,
+      "intervalSeconds": 5,
+      "timeoutSeconds": 2,
+      "maxConsecutiveFailures": 2,
+      "ignoreHttp1xx": false
+    }
+  ],
+  "upgradeStrategy": {
+    "minimumHealthCapacity": {{traefik.minimumHealthCapacity}},
+    "maximumOverCapacity": {{traefik.maximumOverCapacity}}
+  },
+  "args":[
+    "--web",
+    "--marathon",
+    "--marathon.endpoint", "{{traefik.marathon-uri}}",
+    "--marathon.exposedbydefault",
+    "--marathon.groupsassubdomains"
+  ],
+  "requirePorts":true,
+  "env": {
+  },
+  "ports": [
+    80
+  ]
+}

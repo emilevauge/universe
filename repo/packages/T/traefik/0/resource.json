@@ -1,0 +1,14 @@
+{
+  "images": {
+    "icon-small": "https://traefik.io/traefik.logo.png",
+    "icon-medium": "https://traefik.io/traefik.logo.png",
+    "icon-large": "https://traefik.io/traefik.logo.png"
+  },
+  "assets": {
+    "container": {
+      "docker": {
+        "traefik-docker": "traefik:reblochon"
+      }
+    }
+  }
+}

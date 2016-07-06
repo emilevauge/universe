@@ -542,6 +542,23 @@
       }
     },
     {
+      "currentVersion":"1.0.0",
+      "description":"Traefik configured using Marathon state",
+      "framework":false,
+      "name":"traefik",
+      "selected":false,
+      "tags":[
+        "loadbalancer",
+        "service-discovery",
+        "reverse-proxy",
+        "proxy",
+        "traefik"
+      ],
+      "versions":{
+        "1.0.0":"0"
+      }
+    },
+    {
       "currentVersion":"0.8.5",
       "description":"Canary test/release and autoscaling platform for DC/OS",
       "framework":false,

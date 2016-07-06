@@ -1,0 +1,18 @@
+{
+  "packagingVersion": "2.0",
+  "name": "traefik",
+  "version": "1.0.0",
+  "scm": "https://github.com/containous/traefik",
+  "description": "Traefik configured using Marathon state",
+  "maintainer": "support@containo.us",
+  "tags": ["loadbalancer", "service-discovery", "reverse-proxy", "proxy", "traefik"],
+  "preInstallNotes": "We recommend a minimum of 0.5 CPUs and 256 MB of RAM available for the Traefik DCOS Service.",
+  "postInstallNotes": "Traefik DCOS Service has been successfully installed!\nSee https://docs.traefik.io for documentation.",
+  "postUninstallNotes": "Traefik DCOS Service has been uninstalled and will no longer run.",
+  "licenses": [
+    {
+      "name": "MIT",
+      "url": "https://github.com/containous/traefik/blob/master/LICENSE.md"
+    }
+  ]
+}
